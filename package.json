@@ -1,0 +1,13 @@
+{
+  "name": "speechygo-gnome",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Speechy Go GNOME Shell extension with Deepgram and Gemini companion service",
+  "scripts": {
+    "gnome:build": "bash scripts/build-gnome.sh",
+    "gnome:install": "bash scripts/install-local.sh",
+    "gnome:health": "python3 companion/main.py --health-check",
+    "gnome:companion-stdio": "python3 companion/main.py --stdio",
+    "gnome:stream": "python3 companion/main.py --stream --config-json '{}'"
+  }
+}

@@ -1,0 +1,18 @@
+# Agent local state
+.agent/
+
+# Node
+node_modules/
+
+# Build artifacts
+.build/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS/editor
+.DS_Store
+.vscode/

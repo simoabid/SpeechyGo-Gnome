@@ -1,0 +1,18 @@
+{
+  "uuid": "speechygo@seemoo.dev",
+  "name": "Speechy Go",
+  "description": "Speech-to-text and text enhancement from GNOME Shell using Deepgram and Gemini",
+  "version": 1,
+  "shell-version": [
+    "46",
+    "47",
+    "48"
+  ],
+  "session-modes": [
+    "user",
+    "zorin",
+    "ubuntu"
+  ],
+  "url": "https://github.com/simoabid/SpeechyGo",
+  "settings-schema": "org.speechygo"
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.speechygo" path="/org/speechygo/">
+    <key name="deepgram-api-key" type="s">
+      <default>''</default>
+      <summary>Deepgram API key</summary>
+      <description>API key used for Deepgram speech-to-text requests.</description>
+    </key>
+
+    <key name="gemini-api-key" type="s">
+      <default>''</default>
+      <summary>Gemini API key</summary>
+      <description>API key used for Gemini text enhancement requests.</description>
+    </key>
+
+    <key name="enable-gemini" type="b">
+      <default>false</default>
+      <summary>Enable Gemini enhancement</summary>
+      <description>When enabled, speech transcription results are post-processed with Gemini.</description>
+    </key>
+
+    <key name="gemini-model" type="s">
+      <default>'gemini-3-flash-preview'</default>
+      <summary>Gemini model</summary>
+      <description>Model identifier used for Gemini API calls.</description>
+    </key>
+
+    <key name="gemini-prompt" type="s">
+      <default>'Improve this transcription by adding proper punctuation, capitalization, and formatting. Keep the original meaning intact. Only return the improved text, nothing else:'</default>
+      <summary>Speech enhancement prompt</summary>
+      <description>Prompt used when post-processing speech transcription text.</description>
+    </key>
+
+    <key name="enhance-prompt" type="s">
+      <default>'You are a professional editor. Enhance the following text by improving punctuation, clarity, structure, and professional tone. Keep the original meaning and return only the enhanced text.'</default>
+      <summary>Standalone enhancement prompt</summary>
+      <description>Prompt used by the clipboard text enhancement feature.</description>
+    </key>
+
+    <key name="recording-backend" type="s">
+      <default>'auto'</default>
+      <summary>Recording backend</summary>
+      <description>Backend used by companion service: auto, gstreamer, parecord, arecord.</description>
+    </key>
+
+    <key name="activation-shortcut" type="as">
+      <default>['&lt;Ctrl&gt;&lt;Shift&gt;h']</default>
+      <summary>Activation keyboard shortcut</summary>
+      <description>Global shortcut used to activate Speechy Go start/stop recording flow.</description>
+    </key>
+
+    <key name="live-dictation-shortcut" type="as">
+      <default>['&lt;Ctrl&gt;&lt;Shift&gt;l']</default>
+      <summary>Live dictation keyboard shortcut</summary>
+      <description>Global shortcut used to start/stop live dictation streaming.</description>
+    </key>
+
+    <key name="auto-paste-enabled" type="b">
+      <default>true</default>
+      <summary>Enable automatic paste</summary>
+      <description>If true, Speechy Go attempts to paste returned transcription text into the previously focused application.</description>
+    </key>
+
+    <key name="auto-paste-delay-ms" type="u">
+      <default>140</default>
+      <summary>Auto-paste delay in milliseconds</summary>
+      <description>Delay before sending Ctrl+V after restoring focus to the target window.</description>
+    </key>
+
+    <key name="live-streaming-model" type="s">
+      <default>'nova-2'</default>
+      <summary>Deepgram live streaming model</summary>
+      <description>Model used for live streaming dictation sessions.</description>
+    </key>
+
+    <key name="live-streaming-chunk-ms" type="u">
+      <default>100</default>
+      <summary>Live streaming chunk size in milliseconds</summary>
+      <description>Audio chunk size sent to Deepgram WebSocket during live dictation.</description>
+    </key>
+
+    <key name="live-streaming-interim-enabled" type="b">
+      <default>true</default>
+      <summary>Enable interim live results</summary>
+      <description>If true, interim partial transcripts are inserted while speaking.</description>
+    </key>
+
+    <key name="history-limit" type="u">
+      <default>200</default>
+      <summary>History limit</summary>
+      <description>Maximum number of history records to keep.</description>
+    </key>
+
+    <key name="notification-mode" type="s">
+      <default>'all'</default>
+      <summary>Notification mode</summary>
+      <description>Allowed values: all, errors-only, off.</description>
+    </key>
+
+    <key name="debug-logging" type="b">
+      <default>false</default>
+      <summary>Enable debug logging</summary>
+      <description>If true, companion and extension print additional diagnostics.</description>
+    </key>
+  </schema>
+</schemalist>
